@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>苹果100元</span>
+    <button onclick="addapple()">+</button>
+    <span id="apple">0</span>
+    <br><br>
+
+    <span>西瓜200元</span>
+    <button onclick="addwatermelon()">+</button>
+    <span id="watermelon">0</span>
+    <br><br>
+
+    <span>总金额</span>
+    <span id="total">0</span>
+
+    <script>
+        let apple = 0;
+        let watermelon =0;
+        function addapple(){
+            apple++;
+            document.getElementById("apple").innerHTML=apple;
+            update();
+        }
+        function addwatermelon(){
+            watermelon++;
+            document.getElementById("watermelon").innerHTML=watermelon;
+            update();
+        }
+        function update(){
+            let total = apple*100+watermelon*200;
+            document.getElementById("total").innerHTML=total;
+        }
+    </script>
+</body>
+</html>
