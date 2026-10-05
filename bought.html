@@ -16,6 +16,11 @@
     <span id="watermelon">0</span>
     <br><br>
 
+    <span>短视频200元</span>
+    <button onclick="addduan()">+</button>
+    <span id="duan">0</span>
+    <br><br>
+
     <span>总金额</span>
     <span id="total">0</span>
 
@@ -32,8 +37,13 @@
             document.getElementById("watermelon").innerHTML=watermelon;
             update();
         }
+        function addduan(){
+            watermelon++;
+            document.getElementById("duan").innerHTML=watermelon;
+            update();
+        }
         function update(){
-            let total = apple*100+watermelon*200;
+            let total = apple*100+watermelon*200+duan*200;
             document.getElementById("total").innerHTML=total;
         }
     </script>
