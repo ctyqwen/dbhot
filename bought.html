@@ -21,12 +21,19 @@
     <span id="duan">0</span>
     <br><br>
 
+    <span>约饭2000元</span>
+    <button onclick="addyue()">+</button>
+    <span id="yue">0</span>
+    <br><br>
+
     <span>总金额</span>
     <span id="total">0</span>
 
     <script>
         let apple = 0;
         let watermelon =0;
+        let duan = 0;
+        let yue = 0;
         function addapple(){
             apple++;
             document.getElementById("apple").innerHTML=apple;
@@ -38,12 +45,17 @@
             update();
         }
         function addduan(){
-            watermelon++;
-            document.getElementById("duan").innerHTML=watermelon;
+            duan++;
+            document.getElementById("duan").innerHTML=duan;
+            update();
+        }
+        function addyue(){
+            yue++;
+            document.getElementById("yue").innerHTML=yue;
             update();
         }
         function update(){
-            let total = apple*100+watermelon*200+duan*200;
+            let total = apple*100+watermelon*200+duan*200+yue*2000;
             document.getElementById("total").innerHTML=total;
         }
     </script>
